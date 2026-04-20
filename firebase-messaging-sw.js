@@ -1,4 +1,4 @@
-var CACHE = 'schedule-v3';
+var CACHE = 'schedule-v4';
 var ASSETS = ['/', '/index.html', '/manifest.json'];
 
 /* ── INSTALL: cache all assets ── */
