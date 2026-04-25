@@ -686,7 +686,7 @@ function scheduleAllToday(){
   arr.forEach(function(t,i){
     if(!t.time||dc[i])return;
     var p=t.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1]-5,0,0);
-    if(fd>now)swSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
+    if(fd>now)wtnSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
   });
   /* Alarms */
   alarms.forEach(function(a){
@@ -694,7 +694,7 @@ function scheduleAllToday(){
     var fire=a.repeat==='once'||a.repeat==='daily'||(a.repeat==='weekdays'&&WD.includes(tn))||(a.repeat==='weekend'&&WKND2.includes(tn));
     if(!fire)return;
     var p=a.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
+    if(fd>now)wtnSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
   });
   /* Custom reminders */
   reminders.forEach(function(r){
@@ -702,7 +702,7 @@ function scheduleAllToday(){
     var fire=r.day==='daily'||r.day==='once'||(r.day==='weekdays'&&WD.includes(tn))||(r.day==='weekend'&&WKND2.includes(tn))||r.day===tn;
     if(!fire)return;
     var p=r.fireTime.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
+    if(fd>now)wtnSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
   });
 }
 
@@ -890,7 +890,7 @@ function scheduleAllToday(){
   arr.forEach(function(t,i){
     if(!t.time||dc[i])return;
     var p=t.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1]-5,0,0);
-    if(fd>now)swSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
+    if(fd>now)wtnSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
   });
   /* Alarms */
   alarms.forEach(function(a){
@@ -898,7 +898,7 @@ function scheduleAllToday(){
     var fire=a.repeat==='once'||a.repeat==='daily'||(a.repeat==='weekdays'&&WD.includes(tn))||(a.repeat==='weekend'&&WKND2.includes(tn));
     if(!fire)return;
     var p=a.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
+    if(fd>now)wtnSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
   });
   /* Custom reminders */
   reminders.forEach(function(r){
@@ -906,7 +906,7 @@ function scheduleAllToday(){
     var fire=r.day==='daily'||r.day==='once'||(r.day==='weekdays'&&WD.includes(tn))||(r.day==='weekend'&&WKND2.includes(tn))||r.day===tn;
     if(!fire)return;
     var p=r.fireTime.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
+    if(fd>now)wtnSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
   });
 }
 
@@ -944,7 +944,7 @@ function scheduleAllToday(){
   arr.forEach(function(t,i){
     if(!t.time||dc[i])return;
     var p=t.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1]-5,0,0);
-    if(fd>now)swSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
+    if(fd>now)wtnSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
   });
   /* Alarms */
   alarms.forEach(function(a){
@@ -952,7 +952,7 @@ function scheduleAllToday(){
     var fire=a.repeat==='once'||a.repeat==='daily'||(a.repeat==='weekdays'&&WD.includes(tn))||(a.repeat==='weekend'&&WKND2.includes(tn));
     if(!fire)return;
     var p=a.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
+    if(fd>now)wtnSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
   });
   /* Custom reminders */
   reminders.forEach(function(r){
@@ -960,7 +960,7 @@ function scheduleAllToday(){
     var fire=r.day==='daily'||r.day==='once'||(r.day==='weekdays'&&WD.includes(tn))||(r.day==='weekend'&&WKND2.includes(tn))||r.day===tn;
     if(!fire)return;
     var p=r.fireTime.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
+    if(fd>now)wtnSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
   });
 }
 
@@ -983,7 +983,7 @@ function scheduleAllToday(){
   arr.forEach(function(t,i){
     if(!t.time||dc[i])return;
     var p=t.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1]-5,0,0);
-    if(fd>now)swSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
+    if(fd>now)wtnSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
   });
   /* Alarms */
   alarms.forEach(function(a){
@@ -991,7 +991,7 @@ function scheduleAllToday(){
     var fire=a.repeat==='once'||a.repeat==='daily'||(a.repeat==='weekdays'&&WD.includes(tn))||(a.repeat==='weekend'&&WKND2.includes(tn));
     if(!fire)return;
     var p=a.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
+    if(fd>now)wtnSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
   });
   /* Custom reminders */
   reminders.forEach(function(r){
@@ -999,7 +999,7 @@ function scheduleAllToday(){
     var fire=r.day==='daily'||r.day==='once'||(r.day==='weekdays'&&WD.includes(tn))||(r.day==='weekend'&&WKND2.includes(tn))||r.day===tn;
     if(!fire)return;
     var p=r.fireTime.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
+    if(fd>now)wtnSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
   });
 }
 
@@ -1269,29 +1269,94 @@ function showMilestone(m){document.getElementById('msEmo').textContent=m.e;docum
 /* ── TOAST / PANEL / NOTIF ── */
 var tT;function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(tT);tT=setTimeout(function(){t.classList.remove('show');},2600);}
 function toggleP(id){var p=document.getElementById(id);if(!p)return;p.style.display=p.style.display==='block'?'none':'block';if(id==='alarmPanel')renderAlarms();if(id==='remPanel')renderRems();if(id==='pomPanel')pomRender();}
+/* ── WEBTONATIVE NOTIFICATION BRIDGE ── */
+/* Detects WebToNative Android/iOS bridge and falls back to browser Notification API */
+function isWebToNative(){
+  /* Android bridge injected by WebToNative */
+  if(window.WebToNative&&typeof window.WebToNative.requestNotificationPermission==='function')return 'android';
+  /* iOS WKWebView bridge injected by WebToNative */
+  if(window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.WebToNative)return 'ios';
+  return false;
+}
+
+function wtnNotify(title,body,tag){
+  var bridge=isWebToNative();
+  if(bridge==='android'){
+    try{
+      window.WebToNative.showNotification(JSON.stringify({title:title,body:body,tag:tag||'reminder'}));
+    }catch(e){}
+  } else if(bridge==='ios'){
+    try{
+      window.webkit.messageHandlers.WebToNative.postMessage({action:'showNotification',title:title,body:body,tag:tag||'reminder'});
+    }catch(e){}
+  } else if(window.Notification&&Notification.permission==='granted'){
+    new Notification(title,{body:body,icon:'/icon.png',tag:tag||'reminder'});
+  }
+}
+
+function wtnSchedule(title,body,fireAt,tag){
+  var bridge=isWebToNative();
+  var delayMs=fireAt-Date.now();
+  if(delayMs<0)return;
+  if(bridge==='android'){
+    try{
+      window.WebToNative.scheduleNotification(JSON.stringify({title:title,body:body,fireAt:fireAt,tag:tag||'sched'}));
+      return;
+    }catch(e){}
+  } else if(bridge==='ios'){
+    try{
+      window.webkit.messageHandlers.WebToNative.postMessage({action:'scheduleNotification',title:title,body:body,fireAt:fireAt,tag:tag||'sched'});
+      return;
+    }catch(e){}
+  }
+  /* Fallback: service worker schedule for browser/PWA */
+  swSchedule(title,body,fireAt,tag);
+}
+
 function reqNotif(){
-  /* WebViewGold handles permissions natively — just check if bridge exists */
-  var hasWVG=(window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.notification)||
-             (window.WebViewGoldAndroid&&window.WebViewGoldAndroid.showNotification);
-  if(hasWVG){
-    document.getElementById('notifBanner').style.display='none';
-    LSS('ws_notif','1');showToast('Notifications enabled! 🎉');
-    var btn=document.getElementById('notifBtn');if(btn){btn.textContent='✅ Alerts On';btn.style.color='#2DFF85';}
+  var bridge=isWebToNative();
+  if(bridge==='android'){
+    try{
+      /* WebToNative Android: request permission via bridge */
+      window.WebToNative.requestNotificationPermission();
+      /* Assume granted — WebToNative handles the OS dialog natively */
+      _notifGranted();
+    }catch(e){showToast('Notification bridge error');}
     return;
   }
-  /* Browser fallback */
-  if(!('Notification' in window)){showToast('Notifications not supported');return;}
+  if(bridge==='ios'){
+    try{
+      window.webkit.messageHandlers.WebToNative.postMessage({action:'requestNotificationPermission'});
+      /* Result comes back via window.onWebToNativePermission callback below */
+    }catch(e){showToast('Notification bridge error');}
+    return;
+  }
+  /* Browser / standard PWA fallback */
+  if(!('Notification' in window)){showToast('Notifications not supported on this browser');return;}
   Notification.requestPermission().then(function(p){
     if(p==='granted'){
-      document.getElementById('notifBanner').style.display='none';
-      LSS('ws_notif','1');showToast('Notifications enabled! 🎉');
-      var btn=document.getElementById('notifBtn');if(btn){btn.textContent='✅ Alerts On';btn.style.color='#2DFF85';}
+      _notifGranted();
       if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').catch(function(){});
     } else {
       showToast('Permission denied — check app settings');
     }
   });
 }
+
+/* Called after permission is granted (any platform) */
+function _notifGranted(){
+  document.getElementById('notifBanner').style.display='none';
+  LSS('ws_notif','1');
+  showToast('Notifications enabled! 🎉');
+  var btn=document.getElementById('notifBtn');
+  if(btn){btn.textContent='✅ Alerts On';btn.style.color='#2DFF85';}
+}
+
+/* WebToNative iOS callback — called by native layer after permission dialog */
+window.onWebToNativePermission=function(granted){
+  if(granted){_notifGranted();}
+  else{showToast('Permission denied — check app settings');}
+};
 function updateOnline(){var b=document.getElementById('offlineBanner');if(b)b.style.display=navigator.onLine?'none':'flex';}
 window.addEventListener('online',updateOnline);window.addEventListener('offline',updateOnline);updateOnline();
 
@@ -1309,14 +1374,18 @@ document.getElementById('qTxt').textContent='"'+QUOTES[qIdx].q+'"';
 document.getElementById('qAuth').textContent='— '+QUOTES[qIdx].a;
 document.getElementById('slDate').value=new Date().toISOString().slice(0,10);
 setStar(4);
-/* Auto-detect WebViewGold bridge — if present, notifications work natively */
+/* Auto-detect notification environment on load */
 (function(){
-  var hasWVG=(window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.notification)||
-             (window.WebViewGoldAndroid&&window.WebViewGoldAndroid.showNotification);
-  if(hasWVG){
-    LSS('ws_notif','1');
-    document.getElementById('notifBanner').style.display='none';
-    var btn=document.getElementById('notifBtn');if(btn){btn.textContent='✅ Alerts On';btn.style.color='#2DFF85';}
+  var bridge=isWebToNative();
+  if(bridge){
+    /* Running inside WebToNative APK — notifications supported via native bridge.
+       If user previously granted, mark as ready. Otherwise show banner to prompt. */
+    if(LS('ws_notif')){
+      document.getElementById('notifBanner').style.display='none';
+      var btn=document.getElementById('notifBtn');if(btn){btn.textContent='✅ Alerts On';btn.style.color='#2DFF85';}
+    } else {
+      document.getElementById('notifBanner').style.display='flex';
+    }
   } else if(window.Notification&&Notification.permission==='granted'&&LS('ws_notif')){
     document.getElementById('notifBanner').style.display='none';
     var btn2=document.getElementById('notifBtn');if(btn2){btn2.textContent='✅ Alerts On';btn2.style.color='#2DFF85';}
@@ -1350,7 +1419,7 @@ function scheduleAllToday(){
   arr.forEach(function(t,i){
     if(!t.time||dc[i])return;
     var p=t.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1]-5,0,0);
-    if(fd>now)swSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
+    if(fd>now)wtnSchedule('⏰ '+t.name,'Starting at '+t.time,fd.getTime(),'task-'+i);
   });
   /* Alarms */
   alarms.forEach(function(a){
@@ -1358,7 +1427,7 @@ function scheduleAllToday(){
     var fire=a.repeat==='once'||a.repeat==='daily'||(a.repeat==='weekdays'&&WD.includes(tn))||(a.repeat==='weekend'&&WKND2.includes(tn));
     if(!fire)return;
     var p=a.time.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
+    if(fd>now)wtnSchedule('⏰ '+(a.label||'Alarm'),'Your alarm: '+a.time,fd.getTime(),'alarm-'+a.id);
   });
   /* Custom reminders */
   reminders.forEach(function(r){
@@ -1366,7 +1435,7 @@ function scheduleAllToday(){
     var fire=r.day==='daily'||r.day==='once'||(r.day==='weekdays'&&WD.includes(tn))||(r.day==='weekend'&&WKND2.includes(tn))||r.day===tn;
     if(!fire)return;
     var p=r.fireTime.split(':'),fd=new Date();fd.setHours(+p[0],+p[1],0,0);
-    if(fd>now)swSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
+    if(fd>now)wtnSchedule('🔔 '+r.msg,r.mb>0?r.mb+' min reminder':'Scheduled reminder',fd.getTime(),'rem-'+r.id);
   });
 }
 
